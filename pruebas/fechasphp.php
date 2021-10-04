@@ -55,6 +55,8 @@
             echo "El color: ".$colores. " no está registrado";
             break;
         }
+
     ?>
+    <a href="tablaphp1.html">Volver a la pagina principal</a>
 </body>
 </html>

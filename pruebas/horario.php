@@ -48,7 +48,10 @@
             echo "El horario de hoy es el siguiente: "."<br>";
             echo "
             <table>
-                 <tr>
+                    <tr>
+                    <td>Lunes</td>
+                    </tr>
+                    <tr>
                     <td>Aplicaciones Web</td>
                     </tr>
                     <tr>
@@ -102,7 +105,10 @@
                 echo "<br>"." El horario de hoy es el siguiente: "."<br>";
                 echo "
                 <table>
-                     <tr>
+                        <tr>
+                        <td>Martes</td>
+                        </tr>
+                        <tr>
                         <td>ASO</td>
                         </tr>
                         <tr>
@@ -156,7 +162,10 @@
                     echo "<br>" . "El horario de hoy es el siguiente: "."<br>";
                     echo "
                     <table>
-                         <tr>
+                            <tr>
+                            <td>Miercoles</td>
+                            </tr>
+                            <tr>
                             <td>ASO</td>
                             </tr>
                             <tr>
@@ -209,7 +218,10 @@
                         echo "<br>" ."El horario de hoy es el siguiente: "."<br>";
                         echo "
                         <table>
-                             <tr>
+                                <tr>
+                                <td>Jueves</td>
+                                </tr>
+                                <tr>
                                 <td>BD</td>
                                 </tr>
                                 <tr>
@@ -263,7 +275,10 @@
                             echo "El horario de hoy es el siguiente: "."<br>";
                             echo "
                             <table>
-                                 <tr>
+                                    <tr>
+                                    <td>Viernes</td>
+                                    </tr>
+                                    <tr>
                                     <td>Ingles</td>
                                     </tr>
                                     <tr>
@@ -290,6 +305,6 @@
                             echo "Estamos en fin de semana";
     }
     ?>
-    <a href="tablaphp.html">Volver a la página principal</a>
+    <a href="tablaphp1.html">Volver a la página principal</a>
 </body>
 </html>

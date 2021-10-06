@@ -304,6 +304,7 @@
                             break;
                             default:
                             echo "Estamos en fin de semana";
+                            break;  
     }
     ?>
     <a href="tablaphp1.html">Volver a la página principal</a>

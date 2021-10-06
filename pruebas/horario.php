@@ -10,7 +10,6 @@
             border: 2px solid black;
             border-collapse:collapse;
             background-color: salmon;
-
         }
     </style>
 </head>

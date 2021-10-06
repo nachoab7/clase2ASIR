@@ -20,25 +20,25 @@
     $hora = date("G");
     switch ($dia) {
         case 'Monday':
-            if ($hora > 8) {
+            if ($hora == 8) {
                 echo "Estamos en Implantacion de Aplicaciones Web";
             }
-            elseif ($hora > 9){
+            elseif ($hora == 9){
                 echo "Estamos en Implantacion de Aplicaciones Web";
             }
-            elseif ($hora > 10){
+            elseif ($hora == 10){
                 echo "Estamos en Implantacion de Aplicaciones Web";
             }
-            elseif ($hora > 11){
+            elseif ($hora == 11){
                 echo "Estamos en Recreo";
             }
-            elseif ($hora > 12){
+            elseif ($hora == 12){
                 echo "Estamos en Servicios en Red";
             }
-            elseif ($hora > 13){
+            elseif ($hora == 13){
                 echo "Estamos en Servicios en Red";
             }
-            elseif ($hora > 14){
+            elseif ($hora == 14){
                 echo "Estamos en Servicios en Red";
             }
             else{
@@ -131,7 +131,9 @@
                         </tr>
                     
                 </table> ";
-                break;
+                
+                case 'Wednesday':
+                    break;
                 if ($hora == 8) {
                     echo "Estamos en Administracion de Sistemas Operativos";
                 }
@@ -156,8 +158,7 @@
                 else{
                     echo "Estamos en casita";
                     
-                }
-                case 'Wednesday':
+                }.
             
                     echo "<br>" . "El horario de hoy es el siguiente: "."<br>";
                     echo "

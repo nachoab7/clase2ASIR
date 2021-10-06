@@ -131,9 +131,9 @@
                         </tr>
                     
                 </table> ";
-                
+                break;  
                 case 'Wednesday':
-                    break;
+                    
                 if ($hora == 8) {
                     echo "Estamos en Administracion de Sistemas Operativos";
                 }
@@ -157,7 +157,7 @@
                 }
                 else{
                     echo "Estamos en casita";
-                    
+                  
                 }.
             
                     echo "<br>" . "El horario de hoy es el siguiente: "."<br>";

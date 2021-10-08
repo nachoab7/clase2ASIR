@@ -157,7 +157,7 @@
                 else{
                     echo "Estamos en casita";
                   
-                }.
+                }
             
                     echo "<br>" . "El horario de hoy es el siguiente: "."<br>";
                     echo "

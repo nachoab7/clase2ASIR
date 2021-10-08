@@ -155,10 +155,10 @@
                     echo "Estamos en Servicios en Red";
                 }
                 else{
-                    echo "Estamos en casita";
+                    echo "Estamos en casita"."<br>";
                   
                 }
-            
+                 
                     echo "<br>" . "El horario de hoy es el siguiente: "."<br>";
                     echo "
                     <table>
@@ -268,11 +268,12 @@
                                 echo "Estamos en Empresa";
                             }
                             else{
-                                echo "Estamos en casita";
+                                echo "Estamos en casita"."<br>";
                                 
                             }
-            
-                            echo "El horario de hoy es el siguiente: "."<br>";
+                            
+                        
+                            echo "<br>"."<strong>El horario de hoy es el siguiente: </strong>"."<br>";
                             echo "
                             <table>
                                     <tr>

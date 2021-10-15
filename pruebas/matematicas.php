@@ -57,6 +57,23 @@ function persona($nombre,$edad){
 persona("Miguel ",25);
 persona("Manule ",24);
 
+#Funcion presentate
+function presenta($nombre,$apellidos,$localidad){
+
+    echo "Mi nombre es: ".$nombre. " ".$apellidos. " y soy de ".$localidad."<br>";
+   
+}
+
+presenta("Miguel","Bocachancla","Lora");
+
+#Funcion suma
+function suma($num1,$num2){
+
+    $res=$num1+$num2;
+    echo "El resultado es ".$res."<br>";
+   
+}
+suma(3,2);
 echo "<br>"."<br>"."<br>"."<br>";
 
 $alumnos = array("Nacho","Gonzalo","Javi","Adam","Manule","Miguel","JoseAngel","Ivan");

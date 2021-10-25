@@ -7,34 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
-        <fieldset>
-            <legend><h3>Calculadora</h3></legend>
-    <label><strong>Número 1</strong></label>
-    <input name="numero1" type="text" value=""></input>
-    <br/><br>
-    <label><strong>Número 2</strong></label>
-   
-    <input name="numero2" type="text" value=""></input>
-    <br>
-    <br/>
-    <input type="button" name="suma" value="+">
-    <input type="button" name="resta" value="-">
-    <input type="button" name="multiplicacion" value="*">
-    <input type="button" name="division" value="/">
-    <input type="button" name="resto" value="%">
-    <br><br>
-    <input name="reset" type="reset"></input>
-    <br><br>
-    <input name="solucion" type="submit" value="Resolver"></input>
-    <button type="button" id="close" class="closing" onClick="javascript:close_clip()"><img src="manule.png" ></a></button>
-    <br/>
-   
-    
-    <a href="tablaphp1.html"><input type="button" value="Inicio"> </a>
-</fieldset>
-    </form>
     <?php
+
+$numero1recogida=$_POST["numero1"];
+$numero2recogida=$_POST["numero2"];
+$numero3recogida=$_POST["numero3"];
+$selector=$_POST["operador"];
+
     #Funcion suma
     function suma($num1,$num2){
      $res=$num1+$num2;
@@ -64,16 +43,97 @@
     $res=$num1%$num2;
    echo "El resultado es ".$res."<br>";
   }
+  
 
-  $prueba1=10;
-  $prueba2=2;
 
-  suma($prueba1,$prueba2);
-  resta($prueba1,$prueba2);
-  multiplicacion($prueba1,$prueba2);
-  division($prueba1,$prueba2);
-  modulo($prueba1,$prueba2);
+  #Funcion elevar al cuadrado
+  function cuadrada($num1){
+      $res=$num1*$num1;
+      echo "El resultado es ".$res."<br>";
+  }
 
+  #Funcion elevar al cubo
+  function cubo($num1){
+    $res=$num1*$num1*$num1;
+    echo "El resultado es ".$res."<br>";
+}
+
+#Funcion raiz cuadrada
+    function rcuadrada($num1){
+        $res=sqrt($num1);
+        echo "El resultado es ".$res."<br>";    
+
+    }
+
+    #Funcion elevar a una potencia
+  function potencia($num1,$num2){
+    $res=pow($num1,$num2);
+    echo "El resultado es ".$res."<br>";
+}
+    function fibonacci($fin){
+        $contador=0;
+        $num1=0;
+        $num2=1;
+        $num3=0;
+       while ($contador<=$fin) {
+        $num3=$num1+$num2;
+        $num1=$num2;
+        $num2=$num3;
+        echo $num3."<br>";
+        $contador++;
+       }
+    }
+
+      #Paso 1: Variables method get o post recogida 
+
+  
+      #Paso 2: Representar/usar informacion
+      #echo "lo que sea";
+    switch ($selector) {
+    
+        case '+':
+        suma($numero1recogida,$numero2recogida);
+        break;
+
+        case '-':
+        resta($numero1recogida,$numero2recogida);
+        break;
+
+        case '*':
+        multiplicacion($numero1recogida,$numero2recogida);
+        break;
+
+        case '/':
+        division($numero1recogida,$numero2recogida);
+        break;       
+        
+        case '%':
+        modulo($numero1recogida,$numero2recogida);
+        break;
+
+        case '√':
+        rcuadrada($numero1recogida,$numero2recogida);
+        break; 
+
+        case 'x²':
+        cuadrada($numero1recogida,$numero2recogida);
+        break;
+        
+        case 'x³':
+        cubo($numero1recogida,$numero2recogida);
+        break;
+
+        case 'x^x':
+        potencia($numero1recogida,$numero3recogida);
+        break;    
+
+        case 'fibonacci':
+        fibonacci($numero1recogida);
+        break;
+                default:
+        echo "La cagaste";
+        break;
+}
     ?>
    
 </body>

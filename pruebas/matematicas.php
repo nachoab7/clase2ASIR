@@ -82,5 +82,6 @@ $selectaleatorio = rand(0,7);
 echo "El alumno es: ".$alumnos[$selectaleatorio];
 
     ?>
+    <a href="tablaphp1.html">Inicio<input type="button" value="Inicio">
 </body>
 </html>

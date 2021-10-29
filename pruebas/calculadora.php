@@ -75,15 +75,26 @@ $selector=$_POST["operador"];
         $num1=0;
         $num2=1;
         $num3=0;
-       while ($contador<=$fin) {
+       while ($contador<$fin) {
+        echo $num1."<br>";
         $num3=$num1+$num2;
         $num1=$num2;
         $num2=$num3;
-        echo $num3."<br>";
         $contador++;
        }
     }
 
+    function factorial($numero){
+        $factorial = 1;
+        for ($i = 1; $i<=$numero; $i++){
+            $factorial = $factorial * $i;
+        }
+        return $factorial;
+
+        $resultado = factorial($numero);
+        echo "Factorial de $numero = $resultado";
+    }
+    
       #Paso 1: Variables method get o post recogida 
 
   
@@ -130,8 +141,13 @@ $selector=$_POST["operador"];
         case 'fibonacci':
         fibonacci($numero1recogida);
         break;
-                default:
-        echo "La cagaste";
+
+        case 'factorial':
+        factorial($numero1recogida);
+        break;
+
+        default:
+        echo "Seleccione una opcion válida";
         break;
 }
     ?>

@@ -29,9 +29,17 @@ while ($parada < 5) {
 
 $cochesordenados=sort($coches);
 while ($parada < $cuentacoches) {
-    
+
     $cochesordenados=sort($coches);
     echo $cochesordenados[$parada]."<br>";
     $parada++;  
 }
+
+#array asociativos
+$alumnos = array("Nombre" => "Migue","kerry",     
+                "Apellidos"=>"Pajero",
+                "Edad"=> 25,
+                "estaAprobado" => false);
+echo $alumnos["Edad"];
+
 ?>

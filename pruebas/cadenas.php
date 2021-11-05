@@ -23,7 +23,16 @@
     }
     function busqueda($text1,$text2){
     $res=strpos($text1,$text2);
-    echo "Lo que estas buscando es ".$res."<br>";
+    if ($res==True) {
+
+        echo "La palabra '" . $text2 . "' se encuentra en el texto";
+
+    } else {
+
+        echo "La palabra '" . $text2 . "' no se encuentra en el texto";
+
+    }
+   
     }
     function invertir($text1){
         $res=strrev($text1);

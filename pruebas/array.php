@@ -63,6 +63,30 @@ echo "El numero de letras es: ".$cuentaletras;
 
 
 
+#clase 12 noviembre
+
+$colores1=["Verde","Azul","Amarillo","Rojo","Negro"];
+$colores2=["Verde","Azul","Amarillo","Rojo","Blanco"];
+echo "<br>";
+$resultadoDiferencia=array_diff($colores2,$colores1);
+$resultadoUnion=array_merge($colores2,$colores1);
+$resultadoInterseccion=array_intersect($colores2,$colores1);
+//$acumulador=array("purpura","marron","celeste");
+$colores4=array_push($colores2,"purpura","celeste");
+print_r($colores4);
+echo "<br>";
+//$ordenarArrayAlfabeticamente=sort($colores2,SORT_NATURAL);
+//print_r($ordenarArrayAlfabeticamente);
+echo "<br>";
+print_r($resultadoDiferencia);
+echo "<br>";
+print_r($resultadoUnion);
+echo "<br>";
+print_r($resultadoInterseccion);
+echo "<br>";
+print_r($colores4);
+echo "<br>";
+print_r($colores2);
 /*
 $numeros = array (8,3,7,1);
 $suspensos = array("Miguel","kerry");

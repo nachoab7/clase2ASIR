@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuelos</title>
+
+</head>
+<body>
+
+    <form action="vuelos.php" method="POST" target="_blank">
+    <fieldset>
+        <legend><h2><strong>Gestion de vuelos</strong></h2></legend>
+            <fieldset>
+                    <legend><h3>Vuelo 1</h3></legend>
+            <label><strong>Código</strong></label>
+            <input name="infovuelo1[codigo1]" type="text" value="" placeholder="Escriba aquí" required></input>
+            <br/><br>
+            <label><strong>Ciudad origen</strong></label>
+            <input name="infovuelo1[origen1]" type="text" value="" placeholder="Escriba aquí" required></input>
+            <br>
+            <label><strong>Ciudad destino</strong></label>
+            <input name="infovuelo1[destino1]" type="text" value="" placeholder="Escriba aquí" required></input>
+            <br/>
+            <label><strong>Precio</strong></label>
+            <input name="infovuelo1[precio1]" type="text" value="" placeholder="Escriba aquí" required></input>
+            <br/>   
+            <label><strong>Fecha salida</strong></label>
+            <input name="infovuelo1[fecha1]" type="date" value="" placeholder="Escriba aquí" required></input>
+             </fieldset>
+        
+            
+            <fieldset>
+                <legend><h3>Vuelo 2</h3></legend>
+                <label><strong>Código</strong></label>
+                <input name="infovuelo2[codigo2]" type="text" value="" placeholder="Escriba aquí" required></input>
+                <br/><br>
+                <label><strong>Ciudad origen</strong></label>
+                <input name="infovuelo2[origen2]" type="text" value="" placeholder="Escriba aquí" required></input>
+                <br>
+                <label><strong>Ciudad destino</strong></label>
+                <input name="infovuelo2[destino2]" type="text" value="" placeholder="Escriba aquí" required></input>
+                <br/>
+                <label><strong>Precio</strong></label>
+                <input name="infovuelo2[precio2]" type="text" value="" placeholder="Escriba aquí" required></input>
+                <br/>
+                <label><strong>Fecha salida</strong></label>
+                <input name="infovuelo2[fecha2]" type="date" value="" placeholder="Escriba aquí" required></input>
+            </fieldset>
+    
+              
+                <fieldset>
+                        <legend><h3>Herramientas</h3></legend>
+                <label><strong></strong></label>
+                <select name="operador">
+                    <option value="une">Une vuelos</option>
+                    <option value="dif">Diferencia entre vuelos</option>
+                    <option value="ord">Ordena vuelos</option>
+                    <option value="info">Información Común</option>
+                </select>
+                </fieldset>
+    </fieldset>
+    <br><br>
+    <input name="reset" type="reset"></input>
+    <input type="submit">
+    <!--<button type="button" id="close" class="closing" onClick="javascript:close_clip()"><img src="manule.png" ></a></button>-->
+    
+</form>
+<a href="tablaphp1.html"><input type="button" value="Inicio"> </a>  
+</body>
+</html>

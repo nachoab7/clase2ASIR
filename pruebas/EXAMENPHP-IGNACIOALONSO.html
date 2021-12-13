@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen</title>
+</head>
+<body>
+    <form action="EXAMENPHP-IGNACIOALONSO.php" method="POST" target="_blank">
+        <fieldset>
+                <legend><strong>Conversor de numeros</strong></legend>
+                <strong>Opción 1: Numero concreto</strong>
+                <br>
+                <label><strong>Numero</strong></label>
+                <input name="texto1" type="text" value="" placeholder="Escriba aquí"></input>
+                
+                    <br>
+                    <strong>Opción 2: Numero aleatorio: NOTA:</strong> El rango de numero es de 0 a 48</strong>
+                 
+                    <br>
+                    <label><strong>Numero aleatorio</strong></label>
+                    <br>
+                <input name="texto2" type="radio" value="ok" >Sí</input>
+                <input name="texto3" type="radio" value="">No</input>
+                <br>
+                <strong>Seleccione una conversion</strong>
+                <br>
+                <select name="conversor">
+                    <option value="b">Decimal a binario</option>
+                    <option value="o">Decimal a Octal</option>
+                    <option value="h">Decimal a Hexadecimal</option>
+                    <option value="d">Binario a Decimal</option>
+                    <option value="oc">Octal a decimal</option>
+                    <option value="dx">Hexadecimal a binario</option>
+                    </select>
+        </fieldset>
+        <input name="reset" type="reset"></input>
+    <input type="submit">
+    </form>
+    
+</body>
+</html>

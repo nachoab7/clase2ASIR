@@ -1,30 +1,51 @@
 <?php 
 #todas las funciones necesarias para el trabajo
 
-#include "arraysdb.php"
+include "arraysbd.php";
 /*function media_pasajeros($num1,$num2){
 
 };*/
-$arrayfabricante=array(
-    array("Vuelo"=>"Vueling-AE12","Fabricante"=>"Boeing"),
-    array("Vuelo"=>"Volotea-EA21","Fabricante"=>"Airbus"),
-    array("Vuelo"=>"Iberia-WE44","Fabricante"=>"Airbus"),
-    array("Vuelo"=>"Ryanair-EW44","Fabricante"=>"Boeing"),
-    array("Vuelo"=>"Vueling-ZK87","Fabricante"=>"Airbus"),
-    array("Vuelo"=>"Volotea-UA21","Fabricante"=>"Boeing"),
-    array("Vuelo"=>"Iberia-WH44","Fabricante"=>"Boeing"),
-    array("Vuelo"=>"Ryanair-EL00","Fabricante"=>"Airbus")
-);
+
 
 $texto="Vueling-AE12";
+$num=0;
 function fabricante($texto,$arrayfabricante){
     foreach ($arrayfabricante as $fabricantito) {
         $fabricante=$fabricantito["Fabricante"];
         $vuelo=$fabricantito["Vuelo"];
-        if ($vuelo=$texto) {
-            echo $fabricante;
+
+        if ($vuelo==$texto) {
+            echo "El fabricante de este avión es: ". $fabricante."<br>";
         }
+        
     }
 }
+function minutos_totales($texto,$arrayduracion,$num ){
+    foreach ($arrayduracion as $duracioncita) {
+        $vuelo=$duracioncita["Vuelo"];
+        $duracion=$duracioncita["Minutos"];
+        if ($vuelo==$texto) {
+            $num=$num+$duracion;
+            $res=$num;
+            
+        }
+    }
+    echo "Los minutos totales de este vuelo son: ".$res."<br>";
+}
 
+function destinos($texto,$arrayciudad){
+    foreach ($arrayciudad as $ciudadita) {
+     $vuelo=$ciudadita["Vuelo"];
+     $ciudad=$ciudadita["Ciudad"];
+     if ($vuelo==$texto) {
+         echo "La ultima/s ciudad/es visitada/s por este avion son: ". $ciudad."<br>";
+     }
+}
+}
+
+
+
+fabricante($texto,$arrayfabricante);
+minutos_totales($texto,$arrayduracion,$num);
+destinos($texto,$arrayciudad);
 ?>

@@ -1,13 +1,14 @@
 <?php 
 #todas las funciones necesarias para el trabajo
 
-include "arraysbd.php";
+include_once "arraysbd.php";
+include_once "1.php";
 /*function media_pasajeros($num1,$num2){
 
 };*/
 
 
-$texto="Vueling-AE12";
+#   $texto="Vueling-AE12";
 $num=0;
 function fabricante($texto,$arrayfabricante){
     foreach ($arrayfabricante as $fabricantito) {
@@ -45,7 +46,5 @@ function destinos($texto,$arrayciudad){
 
 
 
-fabricante($texto,$arrayfabricante);
-minutos_totales($texto,$arrayduracion,$num);
-destinos($texto,$arrayciudad);
+
 ?>

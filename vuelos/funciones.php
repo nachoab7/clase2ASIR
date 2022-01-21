@@ -40,8 +40,6 @@ function minutos_totales($texto,$arrayduracion,$num ){
         $pasajeros=$pasajeroscita["Minutos"];
         if ($vuelo==$texto) {
             $num=$num+$pasajeros;
-    
-            
         }
     }
     echo "Los minutos totales de este vuelo son: ".$num."<br>";

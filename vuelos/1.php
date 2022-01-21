@@ -5,6 +5,8 @@ include_once "arraysbd.php";
 include_once "funciones.php";
 $texto=$_POST["vuelo"];
 
+echo $texto."<br>";
+
         media_pasajeros($texto,$arraypasajeros);
         destinos($texto,$arrayciudad);
         fabricante($texto,$arrayfabricante);
@@ -77,7 +79,4 @@ $texto=$_POST["vuelo"];
         echo "Seleccione una opcion válida";
         break;
 }*/
-
-
-
 ?>

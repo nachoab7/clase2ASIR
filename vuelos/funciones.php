@@ -3,54 +3,48 @@
 
 include_once "arraysbd.php";
 
-/*function media_pasajeros($num1,$num2){
-
-};*/
-
-
-#   $texto="Vueling-AE12";
 #Funciones primer php (Mostrar vuelo)
 
-function media_pasajeros($texto,$arraypasajeros){
+function media_pasajeros($texto,$arrayduracion){
     $contador=0;
     $totalpasajeros=0;
-    foreach ($arraypasajeros as $pasajeritos) {
+    foreach ($arrayduracion as $pasajeritos) {
         $vuelo=$pasajeritos["Vuelo"];
+        $pasajeros=$pasajeritos["Personas"];
         if ($vuelo==$texto) {
-            $pasajeros=$pasajeritos["Personas"];
+            
            $totalpasajeros=$totalpasajeros+$pasajeros;
             $contador++;
         }
     }
     $totalpasajeros=$totalpasajeros/$contador;
+    $totalpasajeros/60;
     echo "La media de pasajeros de este vuelo es: ".$totalpasajeros."<br>";
 }
 
-
-
-$num=0;
 function fabricante($texto,$arrayfabricante){
     foreach ($arrayfabricante as $fabricantito) {
         $fabricante=$fabricantito["Fabricante"];
         $vuelo=$fabricantito["Vuelo"];
-
         if ($vuelo==$texto) {
             echo "El fabricante de este avión es: ". $fabricante."<br>";
         }
         
     }
 }
-function minutos_totales($texto,$arraypasajeros,$num ){
-    foreach ($arraypasajeros as $pasajeroscita) {
+
+$num=0;
+function minutos_totales($texto,$arrayduracion,$num ){
+    foreach ($arrayduracion as $pasajeroscita) {
         $vuelo=$pasajeroscita["Vuelo"];
         $pasajeros=$pasajeroscita["Minutos"];
         if ($vuelo==$texto) {
             $num=$num+$pasajeros;
-            $res=$num;
+    
             
         }
     }
-    echo "Los minutos totales de este vuelo son: ".$res."<br>";
+    echo "Los minutos totales de este vuelo son: ".$num."<br>";
 }
 
 function destinos($texto,$arrayciudad){
@@ -62,7 +56,69 @@ function destinos($texto,$arrayciudad){
      }
 }
 }
-#Funciones segundo php (Estadisticas aeropuerto)
+
+#funciones segundo php
+function media_horas_todos_vuelos($arrayduracion){
+    $totalpasajeros=0;
+    $contador=0;
+    foreach ($arrayduracion as $pasajeritos) {
+        $vuelo=$pasajeritos["Vuelo"];
+        $pasajeros=$pasajeritos["Minutos"];
+           $totalpasajeros=$totalpasajeros+$pasajeros;
+           $contador++;
+    }
+    $totalpasajeros=$totalpasajeros/$contador;
+   $totalpasajeros=$totalpasajeros/60;
+    echo "La media de horas de este vuelo es: ".$totalpasajeros."<br>";
+}   
+
+$totalpasajeros=0;
+function total_pasajeros_todo($arraypasajeros,$totalpasajeros){
+    foreach ($arraypasajeros as $pasajeritos) {
+        $pasajeros=$pasajeritos["Personas"];
+           $totalpasajeros=$totalpasajeros+$pasajeros;
+    }
+   
+    echo "El total de pasajeros de todos los vuelos es: ".$totalpasajeros."<br>";
+}
+
+function fabricantes_de_aviones($arrayfabricante){
+    $contadorboeing=0;
+    $contadorairbus=0;
+    foreach ($arrayfabricante as $fabricante) {
+        $elfabricante=$fabricante["Fabricante"];
+
+        if ($elfabricante=="Boeing") {
+            
+            $contadorboeing++;
+        } elseif ($elfabricante=="Airbus"){
+            $contadorairbus++;
+        }
+        
+    }
+    echo "El número de aviones que tiene Boeing es: ".$contadorboeing."<br>";
+    echo "El número de aviones que tiene Airbus es: ".$contadorairbus."<br>";
+}
+
+#Funciones tercer PHP
+
+#Esta funcion es igual que la de fabricante de aviones
+/*function numero_ciudades($arrayfabricante){
+    $contadorboeing=0;
+    $contadorairbus=0;
+    foreach ($arrayfabricante as $fabricante) {
+        $elfabricante=$fabricante["Fabricante"];
+
+        if ($elfabricante=="Boeing") {
+            
+            $contadorboeing++;
+        } elseif ($elfabricante=="Airbus"){
+            $contadorairbus++;
+        }
+        
+    }
+    echo "El número de aviones que tiene Boeing es: ".$contadorboeing."<br>";
+    echo "El número de aviones que tiene Airbus es: ".$contadorairbus."<br>";*/
 
 
 
@@ -80,8 +136,57 @@ function destinos($texto,$arrayciudad){
 
 
 
-/*function media_pasajeros($texto,$arraypasajeros){
-foreach($arraypasajeros as $entry_name => $entry_data){
+
+#Funciones cuarto php (Estadisticas avion)
+$totalpasajeros=0;
+function total_pasajeros($texto,$arraypasajeros,$totalpasajeros){
+    
+    
+    foreach ($arraypasajeros as $pasajeritos) {
+        $vuelo=$pasajeritos["Vuelo"];
+        $pasajeros=$pasajeritos["Personas"];
+        if ($vuelo==$texto) {
+            
+           $totalpasajeros=$totalpasajeros+$pasajeros;
+           
+        }
+    }
+   
+    echo "El total de pasajeros de este vuelo es: ".$totalpasajeros."<br>";
+}
+
+function media_horas($texto,$arrayduracion){
+    $contador=0;
+    $totalpasajeros=0;
+    foreach ($arrayduracion as $pasajeritos) {
+        $vuelo=$pasajeritos["Vuelo"];
+        $pasajeros=$pasajeritos["Minutos"];
+        if ($vuelo==$texto) {
+            
+           $totalpasajeros=$totalpasajeros+$pasajeros;
+            $contador++;
+        }
+    }
+    $totalpasajeros=$totalpasajeros/$contador;
+   $totalpasajeros=$totalpasajeros/60;
+    echo "La media de horas de este vuelo es: ".$totalpasajeros."<br>";
+}   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*function media_pasajeros($texto,$arrayduracion){
+foreach($arrayduracion as $entry_name => $entry_data){
     
    foreach($entry_data as $sub_name => $sub_data){
     $vuelo=$entry_data["Vuelo"];

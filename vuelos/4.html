@@ -8,6 +8,31 @@
     <link rel="stylesheet" type="text/css" href="css.css">
 </head>
 <body>
-    #formulario desplegable en el que marcamos la opcion y se nos abre un php con la solucion
+    <form method="POST" target="_blank" action="4.php">
+        <fieldset>
+            <legend><h3>Aeropuerto</h3></legend>
+    <!--<label><strong>Escriba su vuelo aqui</strong></label>-->
+    <!--<input name="texto" type="text" value=""></input>-->
+    <h3>Seleccione un vuelo y consiga información</h3>
+    <select name="vuelo">
+        <option hidden selected>Selecciona una opción</option>
+        <option value="Vueling-AE12">Vueling-AE12</option>
+        <option value="Volotea-EA21">Volotea-EA21</option>
+        <option value="Iberia-WE44">Iberia-WE44</option>
+        <option value="Ryanair-EW44">Ryanair-EW44</option>
+        <option value="Vueling-ZK87">Vueling-ZK87</option>
+        <option value="Volotea-UA21">Volotea-UA21</option>
+        <option value="Iberia-WH44">Iberia-WH44</option>
+        <option value="Ryanair-EL00">Ryanair-EL00</option>
+    </select>
+    <!--<select name="vuelos">
+        <option value="-----">Seleccione una operacion</option>
+        <option value="selector">Estadisticas del vuelo</option>
+    </select>-->
+    <br> 
+    <input type="submit">
+    <input name="reset" type="reset"></input>  
+    </fieldset>
+    </form>
 </body>
 </html>

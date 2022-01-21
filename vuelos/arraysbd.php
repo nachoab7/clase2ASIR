@@ -55,6 +55,7 @@ $arraypasajeros=array(
     array("Vuelo"=>"Ryanair-EW44","Personas"=>"75"),
     array("Vuelo"=>"Vueling-ZK87","Personas"=>"87"),
     array("Vuelo"=>"Volotea-UA21","Personas"=>"90"),
+    array("Vuelo"=>"Iberia-WH44","Personas"=>"84"),
     array("Vuelo"=>"Ryanair-EL00","Personas"=>"67"),
     array("Vuelo"=>"Vueling-AE12","Personas"=>"86"),
     array("Vuelo"=>"Volotea-EA21","Personas"=>"66"),

@@ -3,9 +3,9 @@
 include_once "arraysbd.php";
 include_once "funciones.php";
 
-pasajeros_totales($texto,$arraypasajeros,$num);
-
-
+total_pasajeros_todo($arraypasajeros,$totalpasajeros);
+media_horas_todos_vuelos($arrayduracion);
+fabricantes_de_aviones($arrayfabricante);
 
 
 ?>

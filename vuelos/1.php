@@ -3,12 +3,19 @@
 #Variables
 include_once "arraysbd.php";
 include_once "funciones.php";
-$texto=$_POST["texto"];
-$selector=$_POST["vuelo"];
+$texto=$_POST["vuelo"];
 
-switch ($selector) {
+        destinos($texto,$arrayciudad);
+        fabricante($texto,$arrayfabricante);
+        minutos_totales($texto,$arrayduracion,$num);
+
+
+#Jesus este es un porrito que me fume por que no me salia una cosa.
+#Lo dejo aqui por que me da pena despues de 10 horas trabajadas con esto
+#$selector=$_POST["vuelo"];
+/*switch ($selector) {
     case 'Vueling-AE12':
-       # media_pasajeros($texto,);
+       #media_pasajeros($texto,);
         destinos($texto,$arrayciudad);
         fabricante($texto,$arrayfabricante);
         minutos_totales($texto,$arrayduracion,$num);
@@ -68,7 +75,7 @@ switch ($selector) {
         
         echo "Seleccione una opcion válida";
         break;
-}
+}*/
 
 
 

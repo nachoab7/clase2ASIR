@@ -2,7 +2,7 @@
 #todas las funciones necesarias para el trabajo
 
 include_once "arraysbd.php";
-include_once "1.php";
+
 /*function media_pasajeros($num1,$num2){
 
 };*/
@@ -44,7 +44,21 @@ function destinos($texto,$arrayciudad){
 }
 }
 
+/*function media_pasajeros($texto,$arraypasajeros){
+foreach($arraypasajeros as $entry_name => $entry_data){
+    
+   foreach($entry_data as $sub_name => $sub_data){
+    $vuelo=$entry_data["Vuelo"];
+    $personas=$entry_data["Personas"];
+    if ($vuelo==$texto){
+        echo "La media de pasajeros es: ". $entry_name;
+    }
+      $sub_results = array_filter(array_column($sub_data, 'result'));
+      $averages[$entry_name][$sub_name] = (count($sub_results) > 0 ? array_sum($sub_results)/count($sub_results) : 'N/A');
+   }
+   
+} 
 
-
+}*/
 
 ?>

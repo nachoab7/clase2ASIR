@@ -5,6 +5,7 @@ include_once "arraysbd.php";
 include_once "funciones.php";
 $texto=$_POST["vuelo"];
 
+        media_pasajeros($texto,$arraypasajeros);
         destinos($texto,$arrayciudad);
         fabricante($texto,$arrayfabricante);
         minutos_totales($texto,$arrayduracion,$num);

@@ -9,6 +9,25 @@ include_once "arraysbd.php";
 
 
 #   $texto="Vueling-AE12";
+#Funciones primer php (Mostrar vuelo)
+
+function media_pasajeros($texto,$arraypasajeros){
+    $contador=0;
+    $totalpasajeros=0;
+    foreach ($arraypasajeros as $pasajeritos) {
+        $vuelo=$pasajeritos["Vuelo"];
+        if ($vuelo==$texto) {
+            $pasajeros=$pasajeritos["Personas"];
+           $totalpasajeros=$totalpasajeros+$pasajeros;
+            $contador++;
+        }
+    }
+    $totalpasajeros=$totalpasajeros/$contador;
+    echo "La media de pasajeros de este vuelo es: ".$totalpasajeros."<br>";
+}
+
+
+
 $num=0;
 function fabricante($texto,$arrayfabricante){
     foreach ($arrayfabricante as $fabricantito) {
@@ -21,12 +40,12 @@ function fabricante($texto,$arrayfabricante){
         
     }
 }
-function minutos_totales($texto,$arrayduracion,$num ){
-    foreach ($arrayduracion as $duracioncita) {
-        $vuelo=$duracioncita["Vuelo"];
-        $duracion=$duracioncita["Minutos"];
+function minutos_totales($texto,$arraypasajeros,$num ){
+    foreach ($arraypasajeros as $pasajeroscita) {
+        $vuelo=$pasajeroscita["Vuelo"];
+        $pasajeros=$pasajeroscita["Minutos"];
         if ($vuelo==$texto) {
-            $num=$num+$duracion;
+            $num=$num+$pasajeros;
             $res=$num;
             
         }
@@ -43,6 +62,23 @@ function destinos($texto,$arrayciudad){
      }
 }
 }
+#Funciones segundo php (Estadisticas aeropuerto)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*function media_pasajeros($texto,$arraypasajeros){
 foreach($arraypasajeros as $entry_name => $entry_data){

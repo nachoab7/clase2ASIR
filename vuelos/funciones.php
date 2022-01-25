@@ -98,25 +98,61 @@ function fabricantes_de_aviones($arrayfabricante){
     echo "El número de aviones que tiene Airbus es: ".$contadorairbus."<br>";
 }
 
+
 #Funciones tercer PHP
 
-#Esta funcion es igual que la de fabricante de aviones
-/*function numero_ciudades($arrayfabricante){
-    $contadorboeing=0;
-    $contadorairbus=0;
-    foreach ($arrayfabricante as $fabricante) {
-        $elfabricante=$fabricante["Fabricante"];
+#numero total de ciudades visitadas
 
-        if ($elfabricante=="Boeing") {
+function totalciudad($arrayciudad){
+
+    $arrayunique=array_unique(array_column($arrayciudad, 'Ciudad'));    
+    $arrayintersect=array_intersect_key($arrayciudad,$arrayunique);
+    echo "El numero de ciudades visitadas son: ".count($arrayintersect)."<br>";
+    
+
+}
+
+#Esta funcion es igual que la de fabricante de aviones
+function numero_ciudades($arrayciudad){
+    $contadormilan=0;
+    $contadorroma=0;
+    $contadorestambul=0;
+    $contadormadrid=0;
+    $contadorlima=0;
+    $contadorbilbao=0;
+    foreach ($arrayciudad as $ciudad) {
+        $laciudad=$ciudad["Ciudad"];
+
+        if ($laciudad=="Milán") {
             
-            $contadorboeing++;
-        } elseif ($elfabricante=="Airbus"){
-            $contadorairbus++;
+            $contadormilan++;
+        } elseif ($laciudad=="Roma"){
+            $contadorroma++;
+        }
+        elseif ($laciudad=="Estambul"){
+            $contadorestambul++;
+        }
+        elseif ($laciudad=="Madrid"){
+            $contadormadrid++;
+        }
+        elseif ($laciudad=="Lima"){
+            $contadorlima++;
+        }
+        elseif ($laciudad=="Bilbao"){
+            $contadorbilbao++;
         }
         
+        
     }
-    echo "El número de aviones que tiene Boeing es: ".$contadorboeing."<br>";
-    echo "El número de aviones que tiene Airbus es: ".$contadorairbus."<br>";*/
+    echo "Las veces que se ha ido a Milan son: ".$contadormilan."<br>";
+    echo "Las veces que se ha ido a Roma son: ".$contadorroma."<br>";
+    echo "Las veces que se ha ido a Estambul son: ".$contadorestambul."<br>";
+    echo "Las veces que se ha ido a Madrid son: ".$contadormadrid."<br>";
+    echo "Las veces que se ha ido a Lima son: ".$contadorlima."<br>";
+    echo "Las veces que se ha ido a Bilbao son: ".$contadorbilbao."<br>";
+}
+
+    
 
 
 

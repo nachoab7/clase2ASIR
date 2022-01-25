@@ -150,26 +150,30 @@ function numero_ciudades($arrayciudad){
     echo "Las veces que se ha ido a Madrid son: ".$contadormadrid."<br>";
     echo "Las veces que se ha ido a Lima son: ".$contadorlima."<br>";
     echo "Las veces que se ha ido a Bilbao son: ".$contadorbilbao."<br>";
+
+$ciudades=array(
+    array("Numero" => $contadorroma,"Ciudad" => "Roma" ),
+    array("Numero" => $contadormilan, "Ciudad" => "Milán" ),
+    array("Numero" => $contadorestambul, "Ciudad" => "Estambul" ),
+    array("Numero" => $contadormadrid, "Ciudad" => "Madrid" ),
+    array("Numero" => $contadorlima, "Ciudad" => "Lima" ),
+    array("Numero" => $contadorbilbao, "Ciudad" => "Bilbao" )
+);
+
+rsort($ciudades);
+echo "La ciudad más visitada es: ";
+$arraymaximo=(array_column($ciudades, "Ciudad"));
+$maxVisitas=$arraymaximo[0];
+echo $maxVisitas."<br>";
+
+echo "Las ciudades menos visitadas son: ";
+$minvisita = array_slice($ciudades,2);
+foreach ($minvisita as $minimo) {
+    $minimaciudad=$minimo["Ciudad"];
+    echo $minimaciudad."/";
+
 }
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 #Funciones cuarto php (Estadisticas avion)
 $totalpasajeros=0;
@@ -205,35 +209,5 @@ function media_horas($texto,$arrayduracion){
    $totalpasajeros=$totalpasajeros/60;
     echo "La media de horas de este vuelo es: ".$totalpasajeros."<br>";
 }   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*function media_pasajeros($texto,$arrayduracion){
-foreach($arrayduracion as $entry_name => $entry_data){
-    
-   foreach($entry_data as $sub_name => $sub_data){
-    $vuelo=$entry_data["Vuelo"];
-    $personas=$entry_data["Personas"];
-    if ($vuelo==$texto){
-        echo "La media de pasajeros es: ". $entry_name;
-    }
-      $sub_results = array_filter(array_column($sub_data, 'result'));
-      $averages[$entry_name][$sub_name] = (count($sub_results) > 0 ? array_sum($sub_results)/count($sub_results) : 'N/A');
-   }
-   
-} 
-
-}*/
 
 ?>

@@ -4,4 +4,5 @@ include_once "arraysbd.php";
 include_once "funciones.php";
 totalciudad($arrayciudad);
 numero_ciudades($arrayciudad);
+
 ?>

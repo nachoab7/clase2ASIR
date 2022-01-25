@@ -6,6 +6,6 @@ include_once "funciones.php";
 total_pasajeros_todo($arraypasajeros,$totalpasajeros);
 media_horas_todos_vuelos($arrayduracion);
 fabricantes_de_aviones($arrayfabricante);
-
+numero_ciudadess($arrayciudad);
 
 ?>

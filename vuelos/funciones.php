@@ -102,7 +102,6 @@ function fabricantes_de_aviones($arrayfabricante){
 #Funciones tercer PHP
 
 #numero total de ciudades visitadas
-
 function totalciudad($arrayciudad){
 
     $arrayunique=array_unique(array_column($arrayciudad, 'Ciudad'));    
@@ -210,4 +209,59 @@ function media_horas($texto,$arrayduracion){
     echo "La media de horas de este vuelo es: ".$totalpasajeros."<br>";
 }   
 
+function numero_ciudadess($arrayciudad){
+    $contadormilan=0;
+    $contadorroma=0;
+    $contadorestambul=0;
+    $contadormadrid=0;
+    $contadorlima=0;
+    $contadorbilbao=0;
+    foreach ($arrayciudad as $ciudad) {
+        $laciudad=$ciudad["Ciudad"];
+
+        if ($laciudad=="Milán") {
+            
+            $contadormilan++;
+        } elseif ($laciudad=="Roma"){
+            $contadorroma++;
+        }
+        elseif ($laciudad=="Estambul"){
+            $contadorestambul++;
+        }
+        elseif ($laciudad=="Madrid"){
+            $contadormadrid++;
+        }
+        elseif ($laciudad=="Lima"){
+            $contadorlima++;
+        }
+        elseif ($laciudad=="Bilbao"){
+            $contadorbilbao++;
+        }
+        
+        
+    }
+    
+$ciudades=array(
+    array("Numero" => $contadorroma,"Ciudad" => "Roma" ),
+    array("Numero" => $contadormilan, "Ciudad" => "Milán" ),
+    array("Numero" => $contadorestambul, "Ciudad" => "Estambul" ),
+    array("Numero" => $contadormadrid, "Ciudad" => "Madrid" ),
+    array("Numero" => $contadorlima, "Ciudad" => "Lima" ),
+    array("Numero" => $contadorbilbao, "Ciudad" => "Bilbao" )
+);
+
+rsort($ciudades);
+echo "La ciudad más conexiones es: ";
+$arraymaximo=(array_column($ciudades, "Ciudad"));
+$maxVisitas=$arraymaximo[0];
+echo $maxVisitas."<br>";
+
+echo "Las ciudades menos conexiones son: ";
+$minvisita = array_slice($ciudades,2);
+foreach ($minvisita as $minimo) {
+    $minimaciudad=$minimo["Ciudad"];
+    echo $minimaciudad."/";
+
+}
+}
 ?>
